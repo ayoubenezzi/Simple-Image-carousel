@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --prim-c: #fff;
+  --sec-c: #717171;
+  --trans-speed: 0.5s;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin: 2rem 0;
+  font-weight: 100;
+}
+
+.slides-container {
+  max-width: 700px;
+  position: relative;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+
+.slide {
+  display: none;
+}
+
+.prev-btn,
+.next-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -2rem;
+  padding: 1rem;
+  color: var(--prim-c);
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 1.2rem;
+  border-radius: 0 3px 3px 0;
+  transition: all var(--trans-speed) ease-out;
+}
+
+.next-btn {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+.prev-btn:active,
+.next-btn:active {
+  color: var(--sec-c);
+}
+
+.text {
+  position: absolute;
+  bottom: 0;
+  padding: 0.8rem 1.5rem;
+  color: var(--prim-c);
+  width: 700px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+.numberText {
+  position: absolute;
+  font-size: 1rem;
+  right: 0;
+  top: 0;
+  color: var(--prim-c);
+  background-color: rgba(0, 0, 0, 0.65);
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 0.8rem;
+}
+
+.fade {
+  animation: fade var(--trans-speed) ease-out;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.2;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
